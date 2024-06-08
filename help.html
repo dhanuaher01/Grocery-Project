@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+    <title>Groceries - Organic Food Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img1/mdb-favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Lora:wght@600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		
+		header {
+			background-color: #F8F8F8;
+			padding: 20px;
+			text-align: center;
+		}
+		
+		h1 {
+			margin: 0;
+		}
+		
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 30px;
+		}
+		
+		.container h2 {
+			margin-bottom: 20px;
+		}
+		
+		.container ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			width: 100%;
+			max-width: 600px;
+		}
+		
+		.container li {
+			border: 1px solid #DDD;
+			border-radius: 5px;
+			margin-bottom: 20px;
+			padding: 10px;
+			display: flex;
+			flex-direction: column;
+		}
+		
+		.container li h3 {
+			margin: 0;
+			font-size: 18px;
+			font-weight: normal;
+			margin-bottom: 10px;
+		}
+		
+		.container li p {
+			margin: 0;
+		}
+		
+		.container li button {
+			margin-top: 10px;
+			padding: 5px 10px;
+			border-radius: 5px;
+			border: none;
+			background-color: #F8F8F8;
+			color: #333;
+			cursor: pointer;
+		}
+		
+		.container li button:hover {
+			background-color: #333;
+			color: #FFF;
+		}
+		
+		.footer {
+			background-color: #F8F8F8;
+			padding: 20px;
+			text-align: center;
+			margin-top: 30px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		 <a href="index.html" class="navbar-nav ms-4 ms-lg-0">
+            <h1 class="fw-bold text-success m-0">Gro<span class="text-secondary">ce</span>ries</h1>
+            <h6 class="fw-bold text-success p-1 m-2">The <span class="text-secondary">Fresh</span> Approach</h6>
+            </a>
+		<p>Need help? Check out our frequently asked questions below.</p>
+	</header>
+	
+	<div class="container">
+		<h2>Frequently Asked Questions</h2>
+		<ul>
+			<li>
+				<h3>How do I place an order?</h3>
+				<p>To place an order, simply browse our selection of products and add the items you want to your cart. When you're ready to checkout, click the "Checkout" button and follow the prompts to complete your order.</p>
+				<button>More Information</button>
+			</li>
+			<li>
+				<h3>What forms of payment do you accept?</h3>
+				<p>We accept all major credit cards, as well as PayPal.</p>
+				<button>More Information</button>
+			</li>
+			<li>
+				<h3>What is your return policy?</h3>
+				<p>We offer a 30-day money-back guarantee on all products. If you're not satisfied with your purchase, simply contact us for a refund.</p>
+				<button>More Information</button>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="footer">
+		<p>Need more help? Contact us at help@grocerystore.com or call us at 1-800-123-456
+			</p>
+	</div>
+<script>
+	// Add event listener to "More Information" buttons
+	const moreInfoButtons = document.querySelectorAll('button');
+	moreInfoButtons.forEach(button => {
+		button.addEventListener('click', showMoreInfo);
+	});
+	
+	// Function to show more information when "More Information" button is clicked
+	function showMoreInfo(event) {
+		const listItem = event.target.parentNode;
+		const paragraph = listItem.querySelector('p');
+		paragraph.classList.toggle('hidden');
+		if (paragraph.classList.contains('hidden')) {
+			event.target.textContent = 'More Information';
+		} else {
+			event.target.textContent = 'Less Information';
+		}
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Groceries - Online Grocery Store</title>
+	 <meta charset="utf-8">
+   
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+   <link href="img1/mdb-favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Lora:wght@600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+<style>
+    /* Cart item list */
+    .cart-list {
+        margin-bottom: 30px;
+    }
+    .cart-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #ddd;
+    }
+    .cart-item-image {
+        width: 200px;
+        margin-right: 30px;
+    }
+    .cart-item-image img {
+        width: 100%;
+    }
+    .cart-item-details {
+        flex-grow: 1;
+    }
+    .cart-item-remove button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    /* Cart summary */
+    .cart-summary {
+        border: 1px solid #ddd;
+        padding: 20px;
+    }
+    .cart-summary h5 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .cart-summary ul {
+        margin-bottom: 20px;
+    }
+    .cart-summary ul li {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    .cart-summary ul li span:first-child {
+        font-weight: bold;
+    }
+    .cart-btn {
+        margin-top: 30px;
+    }
+</style>
+</head>
+<body>
+	<header class="container pt-3">
+		 <a href="index.html" class="navbar-nav ms-4 ms-lg-0">
+               <h1 class="fw-bold text-success m-0">Gro<span class="text-secondary">ce</span>ries</h1>
+            <h6 class="fw-bold text-success p-1 m-2">The <span class="text-secondary">Fresh</span> Approach</h6>
+            </a>
+            <hr>
+            <hr>
+	</header>
+    <div class="container">
+        <!-- Cart item list -->
+        <div class="cart-list">
+            <!-- Cart item 1 -->
+            <div class="cart-item">
+                <div class="cart-item-image">
+                    <img src="img\beets.jpg" alt="Product Image">
+                </div>
+                <div class="cart-item-details">
+                    <h5 class="mb-2">Product Title: Beets</h5>
+                    <p class="mb-2">Product Description: Vegetable</p>
+                    <p class="mb-2">Quantity: 1</p>
+                    <p class="mb-0">₹40.00</p>
+                </div>
+                <div class="cart-item-remove">
+                    <button class="btn btn-danger btn-sm">Remove</button>
+                </div>
+            </div>
+            <!-- Cart item 2 -->
+            <div class="cart-item">
+                <div class="cart-item-image">
+                    <img src="img\product-1.jpg" alt="Product Image">
+                </div>
+                <div class="cart-item-details">
+                    <h5 class="mb-2">Product Title:Tomato</h5>
+                    <p class="mb-2">Product Description: Vegetable</p>
+                    <p class="mb-2">Quantity: 1</p>
+                    <p class="mb-0">₹15.00</p>
+                </div>
+                <div class="cart-item-remove">
+                    <button class="btn btn-danger btn-sm">Remove</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart summary -->
+        <div class="cart-summary">
+            <h5 class="mb-3">Cart Summary</h5>
+            <ul class="list-unstyled">
+                <li>
+                    <span>Subtotal:</span>
+                    <span>₹55.00</span>
+                </li>
+                <li>
+                    <span>Shipping:</span>
+                    <span>Free</span>
+                </li>
+                <li>
+                    <span>Total:</span>
+                    <span>₹55.00</span>
+                </li>
+            </ul>
+            <button class="btn btn-primary btn-block cart-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+</body>
+</html>\

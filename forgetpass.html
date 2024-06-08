@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forget Password Form</title>
+	<link href="img1/mdb-favicon.ico" rel="icon">
+	<style>
+		body {
+			background-color: #f1f1f1;
+			font-family: Arial, sans-serif;
+			text-align: center;
+			padding-top: 50px;
+		}
+		
+		h1 {
+			color: #333;
+			font-size: 36px;
+			margin-bottom: 30px;
+		}
+		
+		form {
+			width: 400px;
+			margin: 0 auto;
+			background-color: #fff;
+			padding: 30px;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		}
+		
+		label {
+			display: inline-block;
+			width: 100%;
+			text-align: left;
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+		
+		input {
+			padding: 10px;
+			font-size: 18px;
+			border: 2px solid #ccc;
+			border-radius: 5px;
+			margin-bottom: 20px;
+			width: 100%;
+			box-sizing: border-box;
+		}
+		
+		button {
+			background-color: #333;
+			color: #fff;
+			font-size: 18px;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+		
+		button:hover {
+			background-color: #666;
+		}
+		
+		.error {
+			color: red;
+			font-size: 14px;
+			margin-bottom: 10px;
+		}
+		
+		.success {
+			color: green;
+			font-size: 14px;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Forget Password Form</h1>
+	<form>
+		<label for="email">Email ID:</label>
+		<input type="email" id="email" name="email" required>
+		<br>
+		
+		<label for="security_question">Security Question:</label>
+		<select id="security_question" name="security_question">
+			<option value="What is your mother's maiden name?">What is your mother's maiden name?</option>
+			<option value="What was the name of your first pet?">What was the name of your first pet?</option>
+			<option value="What is your favorite color?">What is your favorite color?</option>
+			<option value="What city were you born in?">What city were you born in?</option>
+		</select>
+		<br>
+		
+		<label for="security_answer">Security Answer:</label>
+		<input type="text" id="security_answer" name="security_answer" required>
+		<br>
+		
+		<button type="submit" onclick="checkSecurityAnswer()">Submit</button>
+	</form>
+	
+	<script>
+function checkSecurityAnswer() {
+    var email = document.getElementById("email").value;
+    var security_question = document.getElementById("security_question").value;
+    var security_answer = document.getElementById("security_answer").value;
+    
+    // Replace the following code with your own server-side validation and password reset logic
+    if (email == "example@gmail.com" && security_question == "What is your mother's maiden name?" && security_answer == "Smith") {
+        alert("Your password has been reset and sent to your email address.");
+        
+        // Clear form fields
+        document.getElementById("email").value = "";
+        document.getElementById("security_question").selectedIndex = 0;
+        document.getElementById("security_answer").value = "";
+        
+        // Display success message
+        var successMessage = document.createElement("p");
+        successMessage.className = "success";
+        successMessage.textContent = "Your password has been reset and sent to your email address.";
+        form.appendChild(successMessage);
+    } else {
+        // Display error message
+        var errorMessage = document.createElement("p");
+        errorMessage.className = "error";
+        errorMessage.textContent = "Sorry, the email and/or security answer is incorrect. Please try again.";
+        form.insertBefore(errorMessage, form.firstChild);
+    }
+}
+</script>
+</body>
+</html>

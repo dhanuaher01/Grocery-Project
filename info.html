@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Account Info</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		
+		header {
+			background-color: #84c225;
+			color: #fff;
+			padding: 20px;
+		}
+		
+		h1 {
+			margin: 0;
+			font-size: 32px;
+		}
+		
+		.container {
+			margin: 20px;
+			padding: 20px;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+		}
+		
+		label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+		
+		input[type="text"], input[type="email"], input[type="password"] {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ddd;
+			border-radius: 3px;
+			margin-bottom: 20px;
+			box-sizing: border-box;
+		}
+		
+		button {
+			background-color: #84c225;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 3px;
+			cursor: pointer;
+		}
+		
+		button:hover {
+			background-color: #4b7c0a;
+		}
+		
+		.success {
+			color: green;
+			font-weight: bold;
+			margin-top: 10px;
+		}
+		
+		.error {
+			color: red;
+			font-weight: bold;
+			margin-top: 10px;
+		}
+	</style>
+	<link href="img1/mdb-favicon.ico" rel="icon">
+</head>
+<body>
+	<header>
+		<h1>Account Info</h1>
+	</header>
+	<div class="container">
+		<form id="account-form">
+			<label for="full-name">Full Name</label>
+			<input type="text" id="full-name" name="full-name" required>
+			
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email" required>
+			
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" required>
+			
+			<label for="confirm-password">Confirm Password</label>
+			<input type="password" id="confirm-password" name="confirm-password" required>
+			
+			<button type="submit">Save Changes</button>
+		</form>
+		<div id="message"></div>
+	</div>
+	<script>
+		var form = document.getElementById("account-form");
+		form.addEventListener("submit", function(event) {
+			event.preventDefault();
+			
+			var fullName = document.getElementById("full-name").value;
+			var email = document.getElementById("email").value;
+			var password = document.getElementById("password").value;
+			var confirmPassword = document.getElementById("confirm-password").value;
+			
+			if (password !== confirmPassword) {
+				var errorMessage = document.createElement("p");
+				errorMessage.className = "error";
+				errorMessage.textContent = "Password and confirm password do not match.";
+				document.getElementById("message").appendChild(errorMessage);
+				return;
+			}
+			
+			// Replace the following code with your own server-side account info update logic
+			// This code just displays a success message on the page
+			var successMessage = document.createElement("p");
+			successMessage.className = "success";
+			successMessage.textContent = "Your account information has been updated.";
+			document.getElementById("message").appendChild(successMessage).appendChild(successMessage);
+});
+</script>
+
+</body>
+</html>
