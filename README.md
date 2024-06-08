@@ -1,2 +1,2 @@
 # Grocery-Project
-I developed this grocery store website
+I developed this online grocery store website
